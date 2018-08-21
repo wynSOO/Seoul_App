@@ -22,6 +22,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 seoulController = require('./controllers/seoulController')(app)
+require('./controllers/naverController')(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
